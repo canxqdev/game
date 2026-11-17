@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Işığı Kapat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="game">
+  <button id="menu-btn" class="menu-btn" aria-expanded="false" aria-controls="menu">Seçenekler</button>
+  <aside id="menu" hidden>
+    <div class="menu-head"><span>Seçenekler</span><button id="menu-close" class="ghost" aria-label="Kapat">Kapat</button></div>
+    <p class="menu-note">İstediğin bölüme ya da seçime atla.</p>
+    <div id="menu-list"></div>
+    <button id="menu-home" class="ghost">Ana ekrana dön</button>
+  </aside>
+  <img id="pic" alt="">
+  <img id="pic2" alt="">
+  <video id="bg" muted playsinline loop></video>
+  <div id="shade"></div>
+
+  <section id="start" class="screen">
+    <h1>Işığı Kapat</h1>
+    <p class="sub">Perşembe akşamı 18:47. 19. kattasın.</p>
+    <button id="btn-new" class="main">Başla</button>
+    <button id="btn-continue" class="ghost" hidden>Kaldığım seçimden devam et</button>
+  </section>
+
+  <section id="story" class="screen" hidden>
+    <p id="chapter"></p>
+    <p id="text" aria-live="polite"></p>
+    <button id="next" class="ghost">Devam</button>
+  </section>
+
+  <section id="choice" class="screen" hidden>
+    <p id="question"></p>
+    <div class="choices">
+      <button id="c0" class="choice"></button>
+      <button id="c1" class="choice"></button>
+    </div>
+  </section>
+
+  <section id="death" class="screen" hidden>
+    <h2>Yandın</h2>
+    <p id="death-text"></p>
+    <button id="retry" class="main">Seçimden tekrar dene</button>
+  </section>
+
+  <section id="end" class="screen" hidden>
+    <h2 id="end-title"></h2>
+    <p id="end-text"></p>
+    <button id="restart" class="ghost">Baştan oyna</button>
+  </section>
+</main>
+<script src="story.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
